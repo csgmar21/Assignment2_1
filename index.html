@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>
+    <title>Question Tabs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Reverse Your String</h1>
-        <input type="text" id="userInput" placeholder="Enter a string" />
-        <button onclick="reverseString()">Reverse</button>
-        <p id="result"></p>
+    <div class="tabs">
+        <button onclick="showTab('tab1')">Question 1</button>
+        <button onclick="showTab('tab2')">Question 2</button>
+        <button onclick="showTab('tab3')">Question 3</button>
     </div>
+
+    <div id="tab1" class="tab-content">
+        <h2>Reverse String</h2>
+        <input type="text" id="reverseInput" placeholder="Enter a string">
+        <button onclick="reverseString()">Reverse</button>
+        <p id="reverseResult"></p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Palindrome Checker</h2>
+        <input type="text" id="palindromeInput" placeholder="Enter a series of numbers">
+        <button onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="palindromeResult"></p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>Tip Calculator</h2>
+        <input type="number" id="subtotal" placeholder="Subtotal of the bill">
+        <input type="number" id="tipPercentage" placeholder="Tip percentage">
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <p id="totalResult"></p>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
